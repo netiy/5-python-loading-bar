@@ -1,0 +1,10 @@
+# Function: prints 3 dots, deletes them, then prints out 3 dots again
+def loading():
+    def printdots():
+        for i in range(3):
+            time.sleep(0.5), print("".join("."), end="")
+
+    def deletedots():
+        for x in range(3):
+            print("\b", end="")
+    printdots(), time.sleep(0.3), deletedots(), printdots()
