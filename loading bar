@@ -1,0 +1,28 @@
+import time
+
+loadingbars = [" ", " ", " ", " ", " ", " ", " ", " "]
+
+def bars():
+    inlist = -1
+
+    def delete():
+        for number in range(10):
+            print("\b", end="")
+
+    def change():
+        for value in range(1):
+            loadingbars[inlist] = "/"
+
+    def printing():
+        for item in loadingbars:
+            print(item, end="")
+        print("]", end="")
+
+
+    for i in range(8):
+        inlist += 1
+        print("[", end=""), change(), printing(), time.sleep(0.5), delete()
+    print("[", end=""), printing()
+
+
+bars()
